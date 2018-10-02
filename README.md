@@ -1,0 +1,1 @@
+Uses selenium to scrape metadata from javascript content and output to a CSV file. It also has the ability to check if the resource is downloadable or not. The source of data is geoscience publications from the [NovaScan](https://gesner.novascotia.ca/novascan/) website.
