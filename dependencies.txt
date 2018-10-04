@@ -1,0 +1,9 @@
+Python v3.6!
+
+Python Packages:
+	os
+	sys
+	csv
+	pandas
+	selenium
+	beautifulsoup (bs4)
