@@ -7,3 +7,6 @@ Python Packages:
 	pandas
 	selenium
 	beautifulsoup (bs4)
+
+ChromeDriver:
+	http://chromedriver.chromium.org/downloads
