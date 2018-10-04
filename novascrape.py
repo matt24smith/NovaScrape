@@ -25,10 +25,14 @@ def ctrlClick(driver, element):
     driver.switch_to.window(driver.window_handles[-1])
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'Detail:scroller')))
     
+def slash():
+    if sys.platform == "win32": return '\\'
+    elif sys.platform == "darwin": return '/'
+    
     
 # init    
 curpath = os.path.abspath(os.path.dirname(sys.argv[0]))
-chromedriverpath = curpath + r"\chromedriver.exe"    
+chromedriverpath = curpath + slash() + "chromedriver.exe"    
 subjQuery = input("What publications would you like to search for?")
 
 
@@ -86,5 +90,5 @@ while nextPage:
 # close browser and export data to csv
 browser.close()
 df = pd.DataFrame.from_dict(data, orient='index')
-df.to_csv(curpath + r'\publications.csv') # write dataframe to file
+df.to_csv(curpath + slash() + 'publications.csv') # write dataframe to file
 
